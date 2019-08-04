@@ -1,22 +1,21 @@
     
 #!ipxe
 
-# Manjaro Linux Operating System
-# https://manjaro.org
+# Thinclient
 
 goto ${menu}
 
-:manjaro
+:thinclient
 kernel ${memdisk} iso raw
-initrd http://192.168.1.5/manjaro-stable-x86_64.iso
+initrd http://192.168.1.5/TS.iso
 boot
 
-:manjaro_boot
+:thinclient_boot
 kernel ${memdisk} iso raw
-initrd http://192.168.1.5/manjaro-stable-x86_64.iso
+initrd http://192.168.1.5/TS.iso
 boot
-goto manjaro_exit
+goto thinclient_exit
 
-:manjaro_exit
+:thinclient_exit
 clear menu
 exit 0
